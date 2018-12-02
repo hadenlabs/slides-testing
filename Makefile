@@ -6,7 +6,7 @@ OS := $(shell uname)
 .PHONY: help build up requirements clean lint test help
 .DEFAULT_GOAL := help
 
-PROJECT := slide-testing
+PROJECT := slides-testing
 PROJECT_PORT := 8000
 
 PYTHON_VERSION=3.6.4
