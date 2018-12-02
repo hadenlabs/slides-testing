@@ -1,0 +1,25 @@
+version = '1.0.1'
+
+[[files."CHANGELOG.rst"]]
+search = """
+`Unreleased`_
++++++++++++++
+"""
+
+
+replace = """
+`Unreleased`_
++++++++++++++
+
+`{{new_version}}`_ - {{utcnow | strftime('%Y-%m-%d')}}
+++++++++++++++++++++++
+"""
+
+[[files."CHANGELOG.rst"]]
+search = """
+.. _`Unreleased`: https://gitlab.com/hadenlabs/slides-testing/compare/{{old_version}}...HEAD
+"""
+replace = """
+.. _`Unreleased`: https://gitlab.com/hadenlabs/slides-testing/compare/{{new_version}}...HEAD
+.. _{{new_version}}: https://gitlab.com/hadenlabs/slides-testing/compare/{{old_version}}...{{new_version}}
+"""
